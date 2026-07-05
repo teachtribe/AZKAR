@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<footer style="text-align:center; padding:20px; color:#aaa; font-size:14px;">
+    Made with love by Zyad Ahmed Fahmy
+</footer>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+content="#0f172a">
+
+<meta name="description"
+content="موقع الأذكار الإسلامي">
+
+<title>🤲 موقع الأذكار</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+rel="
+
+<!-- ==========================================
+        PRAYER TIMES SECTION
+=========================================== -->
+
+<section class="prayerSection">
+
+    <h2 class="section-title">
+        🕌 مواقيت الصلاة
+    </h2>
+
+    <div class="prayerGrid">
+
+        <!-- Egypt -->
+
+        <article class="prayerCard glass hover">
+
+            <h3>
+                🇪🇬 القاهرة
+            </h3>
+
+            <div id="egyptPrayer" class="loading">
+
+                جاري تحميل المواقيت...
+
+            </div>
+
+        </article>
+
+        <!-- Makkah -->
+
+        <article class="prayerCard glass hover">
+
+            <h3>
+                🇸🇦 مكة المكرمة
+            </h3>
+
+            <div id="meccaPrayer" class="loading">
+
+                جاري تحميل المواقيت...
+
+            </div>
+
+        </article>
+
+        <!-- Pakistan -->
+
+        <article class="prayerCard glass hover">
+
+            <h3>
+                🇵🇰 إسلام آباد
+            </h3>
+
+            <div id="pakistanPrayer" class="loading">
+
+                جاري تحميل المواقيت...
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        QUICK INFO
+=========================================== -->
+
+<section class="glass quickInfo">
+
+    <div class="infoBox">
+
+        <h3>
+            🌅 أذكار اليوم
+        </h3>
+
+        <p>
+            ابدأ يومك بذكر الله، واحرص على المحافظة على الأذكار اليومية.
+        </p>
+
+    </div>
+
+    <div class="infoBox">
+
+        <h3>
+            🤍 فضل الذكر
+        </h3>
+
+        <p>
+            قال تعالى:
+            <br>
+            ﴿ فَاذْكُرُونِي أَذْكُرْكُمْ ﴾
+        </p>
+
+    </div>
+
+    <div class="infoBox">
+
+        <h3>
+            📿 تسبيح
+        </h3>
+
+        <p id="tasbeehToday">
+
+            سبحان الله • الحمد لله • الله أكبر
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                MAIN MENU
+========================================== -->
+
+<section class="container">
+
+    <button class="menu-btn a" onclick="location.href='a.html'">
+
+        <span class="icon">🌅</span>
+
+        <span class="title">
+
+            أذكار الصباح
+
+        </span>
+
+        <span class="subtitle">
+
+            Morning Azkar
+
+        </span>
+
+    </button>
+
+    <button class="menu-btn b" onclick="location.href='b.html'">
+
+        <span class="icon">🌙</span>
+
+        <span class="title">
+
+            أذكار المساء
+
+        </span>
+
+        <span class="subtitle">
+
+            Evening Azkar
+
+        </span>
+
+    </button>
+
+    <button class="menu-btn c" onclick="location.href='c.html'">
+
+        <span class="icon">🕌</span>
+
+        <span class="title">
+
+            أذكار بعد الصلاة
+
+        </span>
+
+        <span class="subtitle">
+
+            After Prayer
+
+        </span>
+
+    </button>
+
+    <button class="menu-btn d" onclick="location.href='d.html'">
+
+        <span class="icon">🤲</span>
+
+        <span class="title">
+
+            الأدعية
+
+        </span>
+
+        <span class="subtitle">
+
+            Duas
+
+        </span>
+
+    </button>
+
+</section>
+
+<!-- ==========================================
+                VERSES SECTION
+========================================== -->
+
+<section class="dailySection">
+
+    <div class="glass dailyCard">
+
+        <h2>
+
+            📖 آية اليوم
+
+        </h2>
+
+        <p id="dailyVerse">
+
+            ﴿ ألا بذكر الله تطمئن القلوب ﴾
+
+        </p>
+
+    </div>
+
+    <div class="glass dailyCard">
+
+        <h2>
+
+            📜 حديث اليوم
+
+        </h2>
+
+        <p id="dailyHadith">
+
+            "خيركم من تعلم القرآن وعلمه"
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="footerContent">
+
+        <h2>
+
+            🤲 موقع الأذكار
+
+        </h2>
+
+        <p>
+
+            نسأل الله أن يجعل هذا العمل خالصًا لوجهه الكريم،
+            وأن ينفع به المسلمين في كل مكان.
+
+        </p>
+
+        <div class="footerLine"></div>
+
+        <small>
+
+            © 2026 جميع الحقوق محفوظة
+
+        </small>
+
+    </div>
+
+</footer>
+
+<script src="zkr.js"></script>
+
+</main>
+
+</body>
+
+</html>

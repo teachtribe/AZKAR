@@ -1,0 +1,1283 @@
+/*==================================================
+                ZKR WEBSITE
+              STYLE.CSS PART 1
+==================================================*/
+
+/*------------------------------
+    Google Font (اختياري)
+------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;800;900&display=swap');
+
+/*------------------------------
+    ROOT
+------------------------------*/
+
+:root{
+
+    --bg1:#08121d;
+    --bg2:#0f1d2d;
+    --bg3:#182c45;
+
+    --glass:rgba(255,255,255,.08);
+
+    --glassBorder:rgba(255,255,255,.12);
+
+    --white:#ffffff;
+
+    --text:#e5e7eb;
+
+    --green:#22c55e;
+
+    --blue:#3b82f6;
+
+    --orange:#fb923c;
+
+    --purple:#8b5cf6;
+
+    --shadow:0 20px 45px rgba(0,0,0,.35);
+
+    --radius:28px;
+
+}
+
+/*------------------------------
+    RESET
+------------------------------*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Cairo',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    min-height:100vh;
+
+    color:var(--white);
+
+    overflow-x:hidden;
+
+    background:
+    linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+
+}
+
+/*------------------------------
+    BACKGROUND
+------------------------------*/
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    overflow:hidden;
+
+}
+
+.background::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    left:-180px;
+
+    top:-180px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.12);
+
+    filter:blur(80px);
+
+    animation:float1 12s ease-in-out infinite;
+
+}
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    right:-120px;
+
+    bottom:-150px;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.12);
+
+    filter:blur(80px);
+
+    animation:float2 14s ease-in-out infinite;
+
+}
+
+@keyframes float1{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(60px,50px);
+
+}
+
+100%{
+
+transform:translate(0,0);
+
+}
+
+}
+
+@keyframes float2{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(-70px,-40px);
+
+}
+
+100%{
+
+transform:translate(0,0);
+
+}
+
+}
+
+/*------------------------------
+    MAIN WRAPPER
+------------------------------*/
+
+main{
+
+    width:min(1400px,94%);
+
+    margin:auto;
+
+}
+
+/*------------------------------
+    HEADER
+------------------------------*/
+
+header{
+
+    width:min(1200px,95%);
+
+    margin:auto;
+
+    padding:55px 20px 35px;
+
+    text-align:center;
+
+}
+
+header h1{
+
+    font-size:clamp(2.3rem,5vw,4rem);
+
+    font-weight:900;
+
+    margin-bottom:18px;
+
+    letter-spacing:.5px;
+
+}
+
+header p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:2;
+
+    font-size:1.15rem;
+
+    color:var(--text);
+
+}
+
+/*------------------------------
+    GLASS CARD
+------------------------------*/
+
+.glass{
+
+    background:var(--glass);
+
+    border:1px solid var(--glassBorder);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+/*------------------------------
+    SECTION TITLE
+------------------------------*/
+
+.section-title{
+
+    text-align:center;
+
+    font-size:2.1rem;
+
+    font-weight:800;
+
+    margin-bottom:30px;
+
+}
+
+/*------------------------------
+    COMMON
+------------------------------*/
+
+section{
+
+    margin-top:45px;
+
+}
+
+/*------------------------------
+    FADE ANIMATION
+------------------------------*/
+
+.fade-up{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/*------------------------------
+    HOVER LIFT
+------------------------------*/
+
+.hover{
+
+    transition:.35s;
+
+}
+
+.hover:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*------------------------------
+    LINKS
+------------------------------*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/*------------------------------
+    IMAGES
+------------------------------*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*==================================================
+            END OF PART 1
+==================================================*/
+/*==================================================
+                STYLE.CSS PART 2
+        TOP INFO + PRAYER TIMES
+==================================================*/
+
+/*------------------------------
+    TOP INFO GRID
+------------------------------*/
+
+.topInfo{
+
+    width:min(1400px,95%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+/*------------------------------
+    CLOCK CARD
+------------------------------*/
+
+.clockCard{
+
+    background:var(--glass);
+
+    border:1px solid var(--glassBorder);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:var(--radius);
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.clockCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.clockCard h2{
+
+    font-size:1.7rem;
+
+    margin-bottom:18px;
+
+    font-weight:800;
+
+}
+
+#clock{
+
+    font-size:3rem;
+
+    font-weight:900;
+
+    color:var(--green);
+
+    letter-spacing:2px;
+
+}
+
+#date{
+
+    font-size:1.35rem;
+
+    line-height:1.8;
+
+    color:var(--text);
+
+}
+
+#hijri{
+
+    font-size:1.35rem;
+
+    line-height:1.8;
+
+    color:var(--text);
+
+}
+
+/*------------------------------
+    NEXT PRAYER
+------------------------------*/
+
+.nextPrayer{
+
+    width:min(1200px,95%);
+
+    margin:45px auto;
+
+    padding:45px;
+
+    border-radius:35px;
+
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
+
+    text-align:center;
+
+}
+
+.nextPrayer h2{
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+
+}
+
+.nextPrayer h1{
+
+    font-size:3.5rem;
+
+    margin-bottom:15px;
+
+    font-weight:900;
+
+}
+
+#countdown{
+
+    font-size:3rem;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+}
+
+/*------------------------------
+    PRAYER SECTION
+------------------------------*/
+
+.prayerSection{
+
+    width:min(1400px,95%);
+
+    margin:55px auto;
+
+}
+
+.prayerSection h2{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    font-size:2.3rem;
+
+    font-weight:900;
+
+}
+
+/*------------------------------
+    PRAYER GRID
+------------------------------*/
+
+.prayerGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/*------------------------------
+    PRAYER CARD
+------------------------------*/
+
+.prayerCard{
+
+    background:var(--glass);
+
+    border:1px solid var(--glassBorder);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:28px;
+
+    padding:30px;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.prayerCard:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.prayerCard h3{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+    font-weight:900;
+
+}
+
+.prayerCard div{
+
+    font-size:1.2rem;
+
+    line-height:2.3;
+
+    color:var(--text);
+
+}
+
+/*------------------------------
+    Prayer Rows
+------------------------------*/
+
+.prayerCard div br{
+
+    margin-bottom:8px;
+
+}
+
+/*------------------------------
+    Loading Animation
+------------------------------*/
+
+.loading{
+
+    animation:pulse 1.4s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+opacity:.4;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:.4;
+
+}
+
+}
+
+/*==================================================
+            END OF PART 2
+==================================================*/
+/*==================================================
+                STYLE.CSS PART 3
+           PROFESSIONAL MENU BUTTONS
+==================================================*/
+
+.container{
+
+    width:min(1400px,95%);
+
+    margin:70px auto 90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+/*==========================
+      BUTTON
+==========================*/
+
+.menu-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:220px;
+
+    border:none;
+
+    border-radius:32px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:1.7rem;
+
+    font-weight:800;
+
+    line-height:1.6;
+
+    transition:.35s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35),
+    inset 0 1px rgba(255,255,255,.15);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+/*==========================
+      ICON
+==========================*/
+
+.menu-btn{
+
+    font-size:1.6rem;
+
+}
+
+.menu-btn::first-line{
+
+    font-size:4rem;
+
+}
+
+/*==========================
+      SHINE EFFECT
+==========================*/
+
+.menu-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-45%;
+
+    width:40%;
+
+    height:300%;
+
+    background:rgba(255,255,255,.25);
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+
+}
+
+.menu-btn:hover::before{
+
+    left:140%;
+
+}
+
+/*==========================
+      BORDER GLOW
+==========================*/
+
+.menu-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:32px;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    pointer-events:none;
+
+}
+
+/*==========================
+      HOVER
+==========================*/
+
+.menu-btn:hover{
+
+    transform:
+
+    translateY(-12px)
+
+    scale(1.04);
+
+}
+
+/*==========================
+      ACTIVE
+==========================*/
+
+.menu-btn:active{
+
+    transform:scale(.97);
+
+}
+
+/*==========================
+      COLORS
+==========================*/
+
+.a{
+
+    background:
+    linear-gradient(135deg,#38bdf8,#2563eb);
+
+}
+
+.b{
+
+    background:
+    linear-gradient(135deg,#fb923c,#ef4444);
+
+}
+
+.c{
+
+    background:
+    linear-gradient(135deg,#22c55e,#15803d);
+
+}
+
+.d{
+
+    background:
+    linear-gradient(135deg,#a855f7,#6d28d9);
+
+}
+
+/*==========================
+      FLOAT
+==========================*/
+
+.menu-btn:nth-child(1){
+
+animation:floatButton 5s ease-in-out infinite;
+
+}
+
+.menu-btn:nth-child(2){
+
+animation:floatButton 5s ease-in-out .6s infinite;
+
+}
+
+.menu-btn:nth-child(3){
+
+animation:floatButton 5s ease-in-out 1.2s infinite;
+
+}
+
+.menu-btn:nth-child(4){
+
+animation:floatButton 5s ease-in-out 1.8s infinite;
+
+}
+
+@keyframes floatButton{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*==========================
+      APPEAR
+==========================*/
+
+.menu-btn{
+
+animation:appear .8s ease both;
+
+}
+
+.menu-btn:nth-child(2){
+
+animation-delay:.15s;
+
+}
+
+.menu-btn:nth-child(3){
+
+animation-delay:.3s;
+
+}
+
+.menu-btn:nth-child(4){
+
+animation-delay:.45s;
+
+}
+
+@keyframes appear{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/*==================================================
+              END OF PART 3
+==================================================*/
+/*==================================================
+                STYLE.CSS PART 4
+         RESPONSIVE + FINAL POLISH
+==================================================*/
+
+/*==========================
+      Large Screens
+==========================*/
+
+@media (min-width:1600px){
+
+header h1{
+
+font-size:5rem;
+
+}
+
+.container{
+
+max-width:1600px;
+
+}
+
+.prayerGrid{
+
+gap:35px;
+
+}
+
+}
+
+/*==========================
+      Laptop
+==========================*/
+
+@media (max-width:1200px){
+
+.container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.prayerGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.topInfo{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*==========================
+      Tablet
+==========================*/
+
+@media (max-width:900px){
+
+header{
+
+padding:40px 20px;
+
+}
+
+header h1{
+
+font-size:2.7rem;
+
+}
+
+header p{
+
+font-size:1rem;
+
+}
+
+.nextPrayer{
+
+padding:30px;
+
+}
+
+.nextPrayer h1{
+
+font-size:2.6rem;
+
+}
+
+#countdown{
+
+font-size:2.2rem;
+
+}
+
+.prayerGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.container{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.menu-btn{
+
+height:180px;
+
+font-size:1.35rem;
+
+}
+
+}
+
+/*==========================
+      Mobile
+==========================*/
+
+@media (max-width:650px){
+
+.topInfo{
+
+grid-template-columns:1fr;
+
+}
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.menu-btn{
+
+height:150px;
+
+font-size:1.2rem;
+
+border-radius:24px;
+
+}
+
+.menu-btn::first-line{
+
+font-size:3rem;
+
+}
+
+.clockCard{
+
+padding:22px;
+
+}
+
+.clockCard h2{
+
+font-size:1.4rem;
+
+}
+
+#clock{
+
+font-size:2.2rem;
+
+}
+
+#date,#hijri{
+
+font-size:1rem;
+
+}
+
+.nextPrayer{
+
+padding:22px;
+
+}
+
+.nextPrayer h2{
+
+font-size:1.4rem;
+
+}
+
+.nextPrayer h1{
+
+font-size:2rem;
+
+}
+
+#countdown{
+
+font-size:1.7rem;
+
+}
+
+.prayerCard{
+
+padding:20px;
+
+}
+
+.prayerCard h3{
+
+font-size:1.5rem;
+
+}
+
+.prayerCard div{
+
+font-size:1rem;
+
+line-height:2;
+
+}
+
+}
+
+/*==========================
+      Small Phones
+==========================*/
+
+@media (max-width:400px){
+
+header h1{
+
+font-size:2rem;
+
+}
+
+header p{
+
+font-size:.9rem;
+
+}
+
+.menu-btn{
+
+height:130px;
+
+font-size:1rem;
+
+}
+
+.menu-btn::first-line{
+
+font-size:2.5rem;
+
+}
+
+}
+
+/*==========================
+      Scrollbar
+==========================*/
+
+::-webkit-scrollbar{
+
+width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(#2563eb,#22c55e);
+
+border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:linear-gradient(#3b82f6,#4ade80);
+
+}
+
+/*==========================
+      Selection
+==========================*/
+
+::selection{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+/*==========================
+      Focus
+==========================*/
+
+button:focus{
+
+outline:none;
+
+box-shadow:
+0 0 0 4px rgba(59,130,246,.4);
+
+}
+
+/*==========================
+      Smooth transitions
+==========================*/
+
+*{
+
+transition:
+background-color .3s,
+color .3s,
+border-color .3s;
+
+}
+
+/*==========================
+      Prevent overflow
+==========================*/
+
+body{
+
+overflow-x:hidden;
+
+}
+
+/*==========================
+      Footer (if added later)
+==========================*/
+
+footer{
+
+width:100%;
+
+text-align:center;
+
+padding:30px;
+
+opacity:.75;
+
+font-size:.95rem;
+
+}
+
+/*==================================================
+                  END OF FILE
+==================================================*/
